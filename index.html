@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>レンチン電卓 by ogatomo21</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Bulma V1.0.2 from cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.2/css/bulma.min.css"
+        integrity="sha512-RpeJZX3aH5oZN3U3JhE7Sd+HG8XQsqmP3clIbu4G28p668yNsRNj3zMASKe1ATjl/W80wuEtCx2dFA8xaebG5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <section class="hero is-link">
+        <div class="hero-body">
+            <p class="title">レンチン電卓 🧮</p>
+            <p class="subtitle">by Tomoya Ogawa(@ogatomo21)</p>
+        </div>
+    </section>
+
+    <div class="m-6">
+        <div class="card" style="max-width: 500px;">
+            <div class="card-content">
+                <h2 class="subtitle">分秒入力</h2>
+                <div style="display:flex;align-items:start;flex-wrap: wrap;">
+                    <div style="display:flex;align-items:start;">
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select id="watt">
+                                        <optgroup label="家庭用">
+                                            <option value="600">600W</option>
+                                            <option value="500">500W</option>
+                                            <option value="200">200W</option>
+                                            <option value="100">100W</option>
+                                        </optgroup>
+                                        <optgroup label="業務用">
+                                            <option value="1000">1000W</option>
+                                            <option value="1500">1500W</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2">で</div>
+                    </div>
+                    <div style="display:flex;align-items:start;">
+                        <div class="field" style="max-width: 3rem">
+                            <div class="control">
+                                <input id="beforeMin" class="input" type="number" placeholder="2">
+                            </div>
+                        </div>
+                        <div class="p-2">分</div>
+                        <div class="field" style="max-width: 4rem">
+                            <div class="control">
+                                <input id="beforeSec" class="input" type="number" placeholder="30">
+                            </div>
+                        </div>
+                        <div class="p-2">秒</div>
+                    </div>
+                </div>
+                <small>あたために必要な熱量: <span id="joule">0</span> J</small>
+            </div>
+        </div>
+        <br>
+        <div class="card" style="max-width: 700px;">
+            <div class="card-content">
+                <h2 class="subtitle">計算結果</h2>
+                <ul style="font-size: 1.5em;font-weight: bold;">
+                    <li>500W <span id="m500">00</span>分<span id="s500">00</span>秒</li>
+                    <li>600W <span id="m600">00</span>分<span id="s600">00</span>秒</li>
+                    <li>1000W <span id="m1000">00</span>分<span id="s1000">00</span>秒</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                &copy; Tomoya Ogawa 2024
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
